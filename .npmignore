@@ -1,0 +1,14 @@
+src/
+__tests__/
+coverage/
+.env*
+*.log
+.DS_Store
+.vscode/
+.idea/
+jest.config.js
+tsconfig.json
+.turbo
+yarn.lock
+.yarn/
+.pnp.*
