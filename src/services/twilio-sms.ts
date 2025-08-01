@@ -159,14 +159,14 @@ export class TwilioSmsService extends AbstractNotificationProviderService {
       } catch (error) {
         lastError = error as Error;
         this.logger_.error(
-          `Twilio SMS send error (attempt ${attempt}/${this.maxRetries_}): ${error.message}`
+          `Twilio SMS send error (attempt ${attempt}/${this.maxRetries_}): ${(error as Error).message}`
         );
         
         // Don't retry on validation errors
-        if (error.code >= 20000 && error.code < 21000) {
+        if ((error as any).code >= 20000 && (error as any).code < 21000) {
           throw new MedusaError(
             MedusaError.Types.INVALID_DATA,
-            `Twilio validation error: ${error.message}`,
+            `Twilio validation error: ${(error as Error).message}`,
           );
         }
         
