@@ -8,9 +8,6 @@
     "type": "git",
     "url": "https://github.com/specture48/medusa-twilio-sms.git"
   },
-  "bugs": {
-    "url": "https://github.com/specture48/medusa-twilio-sms/issues"
-  },
   "homepage": "https://github.com/specture48/medusa-twilio-sms#readme",
   "files": [
     "dist",
@@ -21,7 +18,7 @@
   "engines": {
     "node": ">=20"
   },
-  "author": "Medusa Community",
+  "author": "specture48",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc --build tsconfig.json",
